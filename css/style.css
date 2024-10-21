@@ -75,11 +75,29 @@ body {
 
 .carousel-inner img {
   width: 100%;
-  height: 300px;
-  /* You can adjust this to fit your needs */
-
+  height: 300px; /* Default height for larger screens (desktop) */
 }
 
+/* Tablet View (768px and up to 1024px) */
+@media (max-width: 1024px) {
+  .carousel-inner img {
+    height: 250px; /* Adjust height for tablet */
+  }
+}
+
+/* Mobile View (up to 767px) */
+@media (max-width: 767px) {
+  .carousel-inner img {
+    height: 220px; /* Adjust height for mobile */
+  }
+}
+
+/* Extra small devices (up to 575px) */
+@media (max-width: 575px) {
+  .carousel-inner img {
+    height: 180px; /* Further adjustment for smaller mobile screens */
+  }
+}
 .carouselFlatBtn {
   filter: invert(30%) sepia(10%) saturate(20%) hue-rotate(0deg) brightness(50%) contrast(100%) !important;
 }
@@ -525,9 +543,39 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  max-width: 110%;
+  height: auto; /* Default behavior for larger screens (desktop) */
 }
+
+/* Tablet View (768px and up to 1024px) */
+@media (max-width: 1024px) {
+  .img-fluid {
+    max-width: 90%; /* Adjust the width for tablet */
+    padding-bottom: 10%;
+  }
+}
+
+/* Mobile View (up to 767px) */
+@media (max-width: 767px) {
+  .img-fluid {
+    max-width: 70%; /* Adjust the width for mobile */
+    margin: 0 auto; /* This centers the image */
+    display: block;
+    padding-bottom: 10%;
+
+  }
+}
+
+/* Extra small devices (up to 575px) */
+@media (max-width: 575px) {
+  .img-fluid {
+    max-width: 60%;
+    padding-bottom: 7%;
+    margin: 0 auto; /* This centers the image */
+    display: block;
+  }
+}
+
 
 .img-thumbnail {
   padding: 0.25rem;
